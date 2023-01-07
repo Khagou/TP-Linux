@@ -1,6 +1,6 @@
 Description de l'application :
-    L'application est une application de base de donnée permettant de recensenser les ordinateurs et disques appartenant
-    au parc informatique. Il recense également les applications utilisées sur l'ensemble du parc informatique.
+    L'application est une application de base de donnée SQL en Python permettant de recensenser les ordinateurs et disques 
+    appartenant à un parc informatique. Il recense également les applications utilisées sur l'ensemble du parc.
 
 Description des serveurs (quels serveurs, que contiennent t’ils, à quoi servent t’ils,
 quels sont les flux réseaux que l’on utilise sur ces serveurs) :
@@ -16,9 +16,19 @@ fonctionnelles dessus) :
     Celui-ci s'occupera de mettre à jour le système et lancera un par un les scripts nécessaire a l'installation de chaque outils.
 
 
+
 /!\ Installation /!\
 
 Avant de procéder à l'installation vérifiez la version de votre système l'installation étant légérement 
-différente sous DEBIAN et RED HAT.
+différente sous DEBIAN.
+
+1) afin de savoir quel système vous utilisez:
+    cat /etc/os-release
+2) /!\ sous Debian il faut ce connecter en root avant de lancer le script:
+    sudo -s
+3) lancez ensuite le scrypt d'installation (sous CentOS vous pouvez directement lancer l'installation en sautant l'étape précédente
+pour ce connecter en root):
+    sh install.sh
+
 
 
