@@ -1,3 +1,5 @@
+# Veuillez lancer le script en "sudo -s" en DEBIAN
+
 set -x
 
 cat /etc/os-release | grep debian
@@ -30,17 +32,17 @@ echo "install DEBIAN"
 sudo apt install gcc -y
 sudo apt install openssl -y
 sudo apt install python3-dev -y 
-sudo apt install Mariadb-server -y 
+sudo apt install mariadb-server -y 
 sudo apt install libmariadb3 libmariadb-dev -y
 sudo apt install python3-pip -y
 sudo pip3 install mariadb==1.0.11 
 
 sudo systemctl start mariadb.service
 
+cd /root/
 fi
 
 # Téléchargement du projet
-cd /root/
 mkdir temp
 cd temp/
 wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1v-6MUPYpwEiiwxMAukpC4CPfMoGKeY54' -O tp-sql.tar.gz
@@ -80,7 +82,6 @@ cp -R tp-sql /bin
 #connexion user et lancement apply
 su user
 
-#executer le programme manuellement
-python3 /bin/tp-sql/app-python/main.py
+#pour executer le programme : python3 /bin/tp-sql/app-python/main.py
 
 fi
