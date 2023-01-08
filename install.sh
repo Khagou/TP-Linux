@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Veuillez lancer le script en "sudo -s" en DEBIAN
 
 set -x
