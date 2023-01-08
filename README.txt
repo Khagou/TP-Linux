@@ -13,6 +13,6 @@ Pour ce faire, exécutez la commande suivante : cat /etc/os-release.
 Sous Debian, connectez vous en root avec la commande : sudo -s
 Sous RedHat, avec un compte utilisateur avec des privilèges superviseur (le compte root par défaut)
 
-donnez les droits d'execution sur le fichier script : chmod +x nom_script
+Donnez les droits d'execution sur le fichier script : chmod +x nom_script
 
 Ensuite, lancez le script d'installation : sh install.sh.
