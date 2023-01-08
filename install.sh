@@ -72,16 +72,18 @@ sed -i 's/admin/user/g' config.py
 sed -i "s/: 'password'/: 'user'/g" config.py
 cd
 
-#creation de user local sans pwd
-useradd user
-passwd -d user
+#creation de l'utilisateur "user" et son mdp "user"
+useradd -m user
+yes user | passwd user
 
-#Copier le dossier dans le rép : BIN
+#Copier le dossier tp-sql dans le rép : BIN
 cp -R tp-sql /bin
 
-#connexion user et lancement apply
-su user
-
-#pour executer le programme : python3 /bin/tp-sql/app-python/main.py
-
-fi
+#modif config user pour lancer application dès à l'ouverture de la session
+chmod o+x /home/user
+cd /home/user
+chmod o+w .bash_profile
+echo "python3 /bin/tp-sql/app-python/main.py" >> .bash_profile
+echo "python3 /bin/tp-sql/app-python/main.py" >> .profile
+chmod o-w .bash_profile
+chmod o-x /home/user
