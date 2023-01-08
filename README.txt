@@ -1,27 +1,18 @@
 Description de l'application :
-    
-    L'application est une application de base de donnée SQL en Python permettant de recensenser les ordinateurs et disques appartenant à un parc informatique. Il recense également les applications utilisées sur l'ensemble du parc.
 
+L'application est une base de données MariaDB en Python qui permet de recenser les ordinateurs et disques appartenant à un parc informatique, ainsi que les applications utilisées sur l'ensemble du parc.
 
-Description des serveurs (quels serveurs, que contiennent t’ils, à quoi servent t’ils, quels sont les flux réseaux que l’on utilise sur ces serveurs) :
-    
-    Les serveurs tournent sous centos et debian, sur les quels est installé un serveur MariaDB qui permet le stockage de la base de données.
+Description des serveurs :
 
+Les serveurs tournent sous CentOS et Debian, et sont équipés d'un serveur MariaDB pour le stockage de la base de données.
 
-Comment utiliser ces scripts pour créer les serveurs dans des machines virtuelles (partez du principe qu’un hyperviseur est déjà installé, et la / les VM créés et fonctionnelles dessus) :
-    
-    Avant de procéder à l'installation vérifiez la version de votre système l'installation étant légérement 
-    différente sous DEBIAN.
+Comment utiliser ce script pour installer l'application sur les machines virtuelles :
 
-    1) afin de savoir quel système vous utilisez:
-        cat /etc/os-release
-    2) /!\ sous Debian il faut ce connecter en root avant de lancer le script:
-        sudo -s
-    3) lancez ensuite le scrypt d'installation (sous CentOS vous pouvez directement lancer l'installation en sautant
-    l'étape précédente pour ce connecter en root):
-        sh install.sh
+Avant de procéder à l'installation, vérifiez la version de votre système (RedHat ou Debian) car l'installation est légèrement différente sous Debian. 
+Pour ce faire, exécutez la commande suivante : cat /etc/os-release. 
+Sous Debian, connectez vous en root avec la commande : sudo -s
+Sous RedHat, avec un compte utilisateur avec des privilèges superviseur (le compte root par défaut)
 
+donnez les droits d'execution sur le fichier script : chmod +x nom_script
 
-
-
-
+Ensuite, lancez le script d'installation : sh install.sh.
