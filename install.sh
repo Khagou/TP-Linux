@@ -87,3 +87,4 @@ echo "python3 /bin/tp-sql/app-python/main.py" >> .bash_profile
 echo "python3 /bin/tp-sql/app-python/main.py" >> .profile
 chmod o-w .bash_profile
 chmod o-x /home/user
+ssh user@localhost
